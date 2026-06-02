@@ -30,7 +30,7 @@ __all__ = [
 
 
 class OllamaModelConfig(BaseModelConfig):
-    model_name: OptStr = "deepseek-v4-pro:cloud"
+    model_name: OptStr = "llama3.2"
     ollama_api_key: OptStr = ""
     ollama_endpoint: OptStr = "http://localhost:11434/v1/chat/completions"
     ollama_extra_body: dict[str, Any] = {}

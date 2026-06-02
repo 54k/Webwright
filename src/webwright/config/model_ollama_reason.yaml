@@ -1,21 +1,8 @@
-# Model modifier — Ollama (reasoning mode — max intelligence, slower).
-#
-# Stack on top of base.yaml:
-#   python -m webwright.run.cli -c base.yaml -c model_ollama_reason.yaml ...
-#
-# Leaves reasoning at model default (max) for highest quality on hard tasks.
-# Each iteration takes 2-10 minutes but produces much better plans.
-# Override via OLLAMA_MODEL env var or edit model_name inline.
-#
-# Available models on your host:
-#   deepseek-v4-pro:cloud   (1.6T, FP8)
-#   qwen3-coder-next:cloud  (80B, FP8)
-#   kimi-k2.6:cloud         (1T, int4)
-#   glm-5.1:cloud
+# Ollama reasoning preset — highest quality, slower iteration.
 
 model:
   model_class: ollama
-  model_name: deepseek-v4-pro:cloud
+  model_name: llama3.2
   ollama_endpoint: http://localhost:11434/v1/chat/completions
   ollama_extra_body:
     reasoning_effort: high
